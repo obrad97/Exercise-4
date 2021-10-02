@@ -210,14 +210,6 @@ body {
     border-radius: 50%;
 }
 
-/*.card-header-info {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
-}*/
-
 .name-and-username-container {
     grid-area: 1 / 2 / 2 / 4;
 }
