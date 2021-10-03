@@ -270,7 +270,7 @@ body {
 }
 
 .main-content {
-    width: 75%;
+    min-width: 75%;
 }
 
 .repos-and-follows {
@@ -311,7 +311,7 @@ body {
 .contact-info {
     display: grid;
     grid-row-gap: 20px;
-    grid-column-gap: 5px;
+    grid-column-gap: 15px;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
 }
@@ -336,6 +336,7 @@ body {
 
 .contact-info a, p {
     text-decoration: none;
+    word-break: break-word;
     font-family: 'Space Mono', monospace;
     font-style: normal;
     font-weight: normal;

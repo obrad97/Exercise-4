@@ -57,7 +57,7 @@ const userData = (inputUrl) => {
 }
 
 const showUserData = (data) => {
-    //console.log(data);
+    console.log(data);
     errorMessage.style.display = 'none';
     if(data.message != 'Not Found'){
         profileImg.src = data.avatar_url;
@@ -87,10 +87,16 @@ const showUserData = (data) => {
         if (twitter.innerHTML != "Not available" || twitter.href == 'undefined') {
             twitter.href ='https://twitter.com/'+data.twitter_username;
         } else {
-            twitter.removeAttribute('href');} 
-        blog.innerText = checkIfDataIsNull(data.blog, blog);
+            twitter.removeAttribute('href');
+        } 
+        if (checkIfDataIsNull(data.html_url, blog) != "Not available") {
+            let profileUrl = data.html_url.split('//')[1];
+            blog.innerText = profileUrl;
+        }else{
+            blog.innerText = checkIfDataIsNull(data.html_url, blog);
+        }
         if (blog.innerHTML != "Not available" || blog.href == 'undefined') {
-            blog.href = data.blog;
+            blog.href = data.html_url;
         } else {
             blog.removeAttribute('href');
         }
